@@ -1,0 +1,9 @@
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+@Component({
+  selector: 'app-contactus',
+  templateUrl: './contactus.component.html',
+  styleUrl: './contactus.component.css'
+})
+export class ContactusComponent {
+}

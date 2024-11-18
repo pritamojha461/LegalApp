@@ -1,0 +1,20 @@
+<div class="chat-container">
+    <header class="chat-header"></header>
+    <main class="chat-history">
+        <ng-container *ngFor="let item of chatHistory">
+            <div>
+                <i class="fa"
+                 [ngClass]="{'fa-user-circle':item.from === 'user','fa-graduation-cap':item.from === 'bot'}"></i>
+                <span>{{item.message}}</span>
+            
+
+            </div>
+        </ng-container>
+        <ng-container *ngIf="loading"></ng-container>
+        <!-- <app-skeleton></app-skeleton> -->
+    </main>
+    <footer class="chat-input">
+        <input type="text" id="message-input" placeholder="Type Your Queary...." [(ngModel)]="prompt">
+        <button id="send-button" (click)="sendData()">Send</button>
+    </footer>
+</div>
